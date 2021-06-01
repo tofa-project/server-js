@@ -29,8 +29,8 @@ class BadURI extends Error {}
 // Amid unsuported URI
 class UnsupportedURI extends Error{}
 
-// When Tor request fails due to different causes
-class TorRequestFailed extends Error {}
+// When request failed due to different causes
+class RequestFailed extends Error {}
 
 // When client is busy processing another call to the same app
 class CallConflicts extends Error {}
@@ -39,7 +39,7 @@ class CallConflicts extends Error {}
 module.exports = {
     CallRejected, CallForbidden, BadCall, 
     CallTimedOut, ClDaConflict, UnsupportedResponseCode,
-    BadURI, TorRequestFailed, UnsupportedURI,
+    BadURI, RequestFailed, UnsupportedURI,
     ConnectTimedOut, CallConflicts,
     
     // Returns appropriate error based on status code
