@@ -3,7 +3,7 @@ const decodeUri = require('../uri/decode-uri')
 const ping = require('./ping')
 const GlobVars = require('../global')
 
-const { getErrorForCode, CallTimedOut, TorRequestFailed} = require('../errors')
+const { getErrorForCode, RequestFailed} = require('../errors')
 
 // Perform a REG call to Tofa client
 // 'meta' must be object and contain "name" and "description"
@@ -30,7 +30,7 @@ module.exports = (uri, meta)=>{
 
             res.text()
             .then(text=>accept(JSON.parse(text).auth_token))
-            .catch(err=>reject( new TorRequestFailed(err) ))
+            .catch(err=>reject( new RequestFailed(err) ))
         } catch(e) {
             reject(e)
         }        
