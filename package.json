@@ -1,10 +1,10 @@
 {
-  "name": "server-js",
-  "version": "0.0.1",
-  "description": "Tofa API adapter for server developers written in javascript",
+  "name": "tofa-server-js",
+  "version": "0.0.0",
+  "description": "Tofa adapter for server developers written in javascript",
   "main": "src/index.js",
   "scripts": {
-    "test": "npx nodemon ./src/tests"
+    "test": "node ./src/tests"
   },
   "author": "",
   "license": "BSD-3-Clause",
