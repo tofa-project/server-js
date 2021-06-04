@@ -8,6 +8,7 @@ Use this package if you're developing web apps in javascript.
 Flow of use:
 1. Initialize with Tor socks5 proxy address
 2. Use adapter methods to communicate with Tofa Clients
+Calls are asynchronous.
 
 ```javascript
 const {init, reg, info, ask } = require('tofa-server-js')
